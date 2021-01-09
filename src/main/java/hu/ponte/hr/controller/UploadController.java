@@ -24,7 +24,7 @@ public class UploadController
 		try {
 			imageStore.saveImage(file);
 		} catch (Exception e) {
-			throw new ImageException("Error.");
+			throw new ImageException(e.getMessage());
 		}
         return "ok";
     }
